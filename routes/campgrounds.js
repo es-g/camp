@@ -25,8 +25,8 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     var author = {
         id: req.user._id,
         username: req.user.username
-    }
-    var newCampground = {name: name, image: image, description: desc, author:author}
+    };
+    var newCampground = {name: name, image: image, description: desc, author:author};
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
         if(err){
@@ -51,7 +51,7 @@ router.get("/:id", function(req, res){
         if(err){
             console.log(err);
         } else {
-            console.log(foundCampground)
+            console.log(foundCampground);
             //render show template with that campground
             res.render("campgrounds/show", {campground: foundCampground});
         }
