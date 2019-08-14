@@ -22,8 +22,9 @@ mongoose.set('useCreateIndex', true);
 // --------------------------------
 
 // seedDB(); //seed the database
+mongoose.connect(process.env.DATABASEURL);
 // mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb+srv://yesbol:sottel4583284@cluster0-6750j.mongodb.net/test?retryWrites=true&w=majority");
+// mongoose.connect("mongodb+srv://yesbol:sottel4583284@cluster0-6750j.mongodb.net/test?retryWrites=true&w=majority");
 // 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
